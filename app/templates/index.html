@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>My Event List</h1>
+{% for event in events %}
+<div>
+    <p>
+        {{ event.name }} : {{ event.date }} : {{ event.guests }} : {{ event.location }} : <b>{{ event.description }}</b>
+        {% if event.recurring %}
+        <span> 🔄 </span>
+        {% endif %}
+    </p>
+</div>
+{% endfor %}
+{% endblock %}
