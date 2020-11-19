@@ -1,7 +1,28 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>This is the info page.</h1>
+<h1 class="page-heading">Event info</h1>
 
-<p>It will include more information about the listed events.</p>
+<p class="event_info">This page will include more information about our listed events.</p>
+
+<p class="event_info">Details of any updates or cancellations will also be posted here.</p>
+
+{% for event in events %}
+<div class="event_info">
+    {% if event.name == "Christmas market" %}
+    <img src="https://source.unsplash.com/500x250/?christmasmarket" />
+    <h2>{{ event.name }}</h2>
+    <p>This eagerly anticipated yearly event returns {{ event.date }}! {{ event.description }}, lorum ipsum etc. This
+        year, due to restrictions, only {{ event.guests }} can enter {{event.location}} at a time. In case of changes to
+        restrictions, keep an eye out for updates. Call for advance tickets.</p>
+    {% endif %}
+
+    {% if event.name == "Hogmanay Hootenanny" %}
+    <img src="https://source.unsplash.com/500x250/?happynewyear" />
+    <h2>{{ event.name }}</h2>
+    <p>This {{event.name}} is nearly here!! {{event.description}} Numbers are limited to {{ event.guests }} so don't
+        delay, get your ticket now!</p>
+    {% endif %}
+</div>
+{% endfor %}
 {% endblock %}

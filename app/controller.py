@@ -8,4 +8,4 @@ def index():
 
 @app.route('/info')
 def info():
-    return render_template('info.html', title="Info", )
+    return render_template('info.html', title="Info", events=events)

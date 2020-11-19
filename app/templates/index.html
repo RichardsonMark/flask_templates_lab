@@ -1,15 +1,21 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>My Event List</h1>
+<h1 class="page-heading">Upcoming Events List</h1>
+
 {% for event in events %}
-<div>
-    <p>
-        {{ event.name }} : {{ event.date }} : {{ event.guests }} : {{ event.location }} : <b>{{ event.description }}</b>
-        {% if event.recurring %}
-        <span> 🔄 </span>
-        {% endif %}
+<section class="event_section">
+    <div class="image-container">
+        <img src="https://source.unsplash.com/500x250/?christmasmarket" />
+        <h2 class="image-title-top-left">{{ event.name }}</h2>
+        <div class="image-text">{{ event.date }} - {{ event.guests }}</div>
+    </div>
+    <p>Location: {{ event.location }} - <b>{{ event.description }}</b></p>
+    {% if event.recurring %}
+    <p><span> 🔄 daily event </span></p>
+    {% endif %}
     </p>
-</div>
+
+</section>
 {% endfor %}
 {% endblock %}

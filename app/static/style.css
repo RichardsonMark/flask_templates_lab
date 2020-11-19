@@ -1,0 +1,102 @@
+header {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: darkgreen;
+    grid-area: header;
+}
+
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-image: url(https://images.unsplash.com/photo-1480480213546-c79a7c9f0904?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+    background-size: cover;
+    background-color: crimson;
+    margin: 0;
+}
+
+footer {
+    padding: 2px;
+    background-color: darkgreen; 
+    text-align: center;   
+    grid-area: footer;
+}
+
+header > ul > li {
+    list-style: none;
+    display: inline-block;
+    font-size: 22px;
+    color: white;
+}
+
+body > div > p {
+    font-size: 19px;
+    color: darkgreen;
+}
+
+p {
+    font-size: 19px;
+    color: white;
+}
+
+.event_section {
+    padding: 10px;
+    border: 1px solid darkgreen;
+}
+
+.image-container {
+    border: 1px solid darkgreen;
+    display: flex;
+    flex-direction: column; 
+    flex-wrap: wrap;     
+    position: relative;
+    text-align: center;
+    color: white;
+    grid-area: main;
+}
+
+.image-text {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+}
+
+.image-title-top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+
+.event-info {
+    color: white;
+    grid-area: event-info;
+}
+
+.page-heading {
+    color: white;
+    grid-area: page-heading;   
+}
+
+#grid-container {
+    display: grid;
+    grid-template-areas: 
+      'header header'
+      'page-heading page-heading'
+      'main main'
+      'event-info event-info'
+      'footer footer';
+    grid-template-columns: 1fr 1fr;
+}
+
+.home-button {
+    border-radius: 15px;
+    background-color: seagreen;
+    color: white;
+    align-items: right;
+    padding: 15px 32px;
+}
+    
+.info-button {
+    border-radius: 15px;
+    background-color: seagreen;
+    color: white;
+    padding: 15px 32px;
+}

@@ -1,15 +1,22 @@
 <html>
     <head>
-        <link rel="stylesheet" href="{{ url_for('static', filename='your_file_name.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
       <title>{{ title }} - My Event List</title>
     </head>
-    <body>
+    <section id="grid-container">
+    <header>
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/info">Info</a></li>
+          <li>My new normal Christmas events page</li>
+          <li><button class="home-button"><a href="/">Home</a></button></li>
+          <li><button class="info-button"><a href="/info">Info</a></button></li>
         </ul>
-        <hr>
+    </header>
+    <body>
         {% block content %}
         {% endblock %}
-    </body>
+    </body>    
+    <footer>
+      <p>&copy; 2020 CodeClan</p>
+    </footer>
+  </section>
 </html>
